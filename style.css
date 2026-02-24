@@ -86,6 +86,13 @@ main{
   margin-top:1px;
 }
 
+/* Desktop Font size */
+@media(min-width:769px){
+  body{
+    font-size:18px;
+  }
+}
+
 /* Desktop Navigation */
 .nav-links{
   display:flex;
