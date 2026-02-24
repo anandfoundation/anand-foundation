@@ -88,8 +88,8 @@ main{
 
 /* Desktop Font size */
 @media(min-width:769px){
-  body{
-    font-size:24px;
+  .prerna p{
+    font-size:21px;
   }
 }
 
@@ -177,8 +177,8 @@ main{
 }
 
 .prerna p{
-  font-size:24px;
-  line-height:2.1;
+  font-size:17px;
+  line-height:1.9;
   color:#444;
 }
 
