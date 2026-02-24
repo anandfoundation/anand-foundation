@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>आनंद फाउंडेशन</title>
+  <link rel="stylesheet" href="style.css">
   <style>
     body {font-family: sans-serif; margin:0; background:#fff7ed;}
     header {text-align:center; padding:20px; background:#fde68a;}
@@ -13,8 +14,6 @@
     section {padding:25px; max-width:900px; margin:auto;}
     footer {text-align:center; padding:20px; background:#fde68a; margin-top:40px;}
   </style>
-</head>
-
 <style>
 .container{
 max-width:1000px;
@@ -43,26 +42,47 @@ opacity:1;
 header{
 box-shadow:0 2px 8px rgba(0,0,0,0.08);
 }
+/* desktop navbar */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  background: #ff914d;
+  padding: 12px;
+}
+
+/* hide hamburger on desktop */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
 }
 </style>
-  
+</head>
 <body>
 
 <header>
-<div class="container">
-<img src="images/logo/logo.jpeg" alt="logo">
-<h1>आनंद फाउंडेशन</h1>
-<p>मतिमंद मुलांसाठी शिक्षण व पुनर्वसन केंद्र</p>
-</div>
+ <div class="container header-row">
+    <div class="logo-area">
+      <img src="images/logo/logo.jpeg">
+      <div>
+        <h1>आनंद फाउंडेशन</h1>
+        <p>मतिमंद मुलांसाठी शिक्षण व पुनर्वसन केंद्र</p>
+      </div>
+    </div>
+   
+<div class="menu-toggle" id="menuToggle">☰</div>
+
+  </div>
 </header>
 
-<nav>
-<a href="index.html">मुखपृष्ठ</a>
-<a href="about.html">संस्थेविषयी</a>
-<a href="work.html">उपक्रम</a>
-<a href="gallery.html">फोटो</a>
-<a href="donate.html">देणगी</a>
-<a href="contact.html">संपर्क</a>
+<nav id="navbar">
+  <a href="index.html">मुख्यपृष्ठ</a>
+  <a href="about.html">संस्थेविषयी</a>
+  <a href="work.html">कार्य</a>
+  <a href="gallery.html">गॅलरी</a>
+  <a href="contact.html">संपर्क</a>
 </nav>
 
 <section id="home">
@@ -75,6 +95,7 @@ box-shadow:0 2px 8px rgba(0,0,0,0.08);
 </p>
 </div>
 </section>
+
 
 <div class="slider">
 <img class="slide" src="images/slider/school.jpeg">
@@ -132,5 +153,14 @@ setInterval(startSlider, 3500);
   <p>© आनंद फाउंडेशन</p>
 </footer>
 
+<script>
+const toggle = document.getElementById("menuToggle");
+const nav = document.getElementById("navbar");
+
+toggle.onclick = () => {
+  nav.classList.toggle("show");
+};
+</script>
+  
 </body>
 </html>
