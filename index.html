@@ -14,46 +14,18 @@
     footer {text-align:center; padding:20px; background:#fde68a; margin-top:40px;}
   </style>
 </head>
-<body>
 
-<header>
-  <img src="images/logo/logo.jpeg" alt="logo">
-  <h1>आनंद फाउंडेशन</h1>
-  <p>मतिमंद मुलांसाठी शिक्षण व पुनर्वसन केंद्र</p>
-</header>
-
-<nav>
-<a href="index.html">मुखपृष्ठ</a>
-<a href="about.html">संस्थेविषयी</a>
-<a href="work.html">उपक्रम</a>
-<a href="gallery.html">फोटो</a>
-<a href="donate.html">देणगी</a>
-<a href="contact.html">संपर्क</a>
-</nav>
-
-<section id="home">
-<h1 style="text-align:center; margin-top:20px;">
-आनंद फाउंडेशन
-</h1>
-<p style="text-align:center;">
-मतिमंद मुलांसाठी शिक्षण व पुनर्वसन केंद्र
-</p>
-</section>
-
-<div class="slider">
-<img class="slide" src="images/slider/school.jpeg">
-<img class="slide" src="images/slider/slide2.jpeg">
-<img class="slide" src="images/slider/slide3.jpeg">
-<img class="slide" src="images/slider/slide4.jpeg">
-</div>
 <style>
-
+.container{
+max-width:1000px;
+margin:auto;
+padding:0 20px;
+}
 .slider{
 position:relative;
 width:100%;
-height:60vh;
+aspect-ratio:16/9;
 max-height:520px;
-min-height:260px;
 overflow:hidden;
 border-radius:14px;
 margin-top:20px;
@@ -68,8 +40,48 @@ transition:opacity 1.2s ease-in-out;
 }
 .slide.active{
 opacity:1;
+header{
+box-shadow:0 2px 8px rgba(0,0,0,0.08);
+}
 }
 </style>
+  
+<body>
+
+<header>
+<div class="container">
+<img src="images/logo/logo.jpeg" alt="logo">
+<h1>आनंद फाउंडेशन</h1>
+<p>मतिमंद मुलांसाठी शिक्षण व पुनर्वसन केंद्र</p>
+</div>
+</header>
+
+<nav>
+<a href="index.html">मुखपृष्ठ</a>
+<a href="about.html">संस्थेविषयी</a>
+<a href="work.html">उपक्रम</a>
+<a href="gallery.html">फोटो</a>
+<a href="donate.html">देणगी</a>
+<a href="contact.html">संपर्क</a>
+</nav>
+
+<section id="home">
+<div class="container">
+<h1 style="text-align:center; margin-top:20px;">
+आनंद फाउंडेशन
+</h1>
+<p style="text-align:center;">
+मतिमंद मुलांसाठी शिक्षण व पुनर्वसन केंद्र
+</p>
+</div>
+</section>
+
+<div class="slider">
+<img class="slide" src="images/slider/school.jpeg">
+<img class="slide" src="images/slider/slide2.jpeg">
+<img class="slide" src="images/slider/slide3.jpeg">
+<img class="slide" src="images/slider/slide4.jpeg">
+</div>
 
 <script>
 let slides = document.querySelectorAll(".slide");
@@ -84,6 +96,7 @@ setInterval(startSlider, 3500);
 </script>
   
 <section style="margin-top:40px; background:#fff3e0; padding:28px; border-radius:14px;">
+<div class="container">
 <div style="max-width:900px; margin:auto;">
 <h2 style="text-align:center; margin-bottom:20px;">आमची प्रेरणा</h2>
 <p style="line-height:1.9; font-size:17px;">
@@ -101,15 +114,18 @@ setInterval(startSlider, 3500);
 <p style="line-height:1.9; font-size:17px;">
 रत्नागिरी जिल्ह्यातील दापोली परिसरात कार्यरत आनंद फाउंडेशन हे विद्यार्थ्यांच्या संपूर्ण पुनर्वसनासाठी सातत्याने प्रयत्नशील आहे. हे केवळ शिक्षण देणारे केंद्र नसून विद्यार्थ्यांच्या सन्मानपूर्वक, आनंदी आणि स्वावलंबी जीवनासाठी चाललेले एक समर्पित सामाजिक कार्य आहे.
 </p>
+</div>
 </section>
   
 <section id="work">
+<div class="container">
   <h2>आमचे कार्य</h2>
   <ul>
     <li>विशेष शिक्षण</li>
     <li>पुनर्वसन प्रशिक्षण</li>
     <li>पालक मार्गदर्शन</li>
   </ul>
+</div>
 </section>
 
 <footer>
