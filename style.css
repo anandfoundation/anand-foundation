@@ -5,6 +5,7 @@ body{
   background:#f8fafc;
   line-height:1.8;
   letter-spacing:0.3px;
+  overflow-x:hidden;
 }
 
 .container{
@@ -180,7 +181,14 @@ footer{
 
   .header-row{
     position:relative;
+    flex-wrap:wrap;
+    gap:10px;
   }
+
+  .brand{
+    flex:1 1 100%;
+  }
+
 
   .brand-text h1{
     font-size:18px;
@@ -199,6 +207,7 @@ footer{
     font-size:14px;
     cursor:pointer;
     white-space:nowrap;
+     align-self:flex-end;
   }
   
   .nav-links{
@@ -207,7 +216,7 @@ footer{
     position:absolute;
     top:100%;
     left:0;
-    width:100vw;
+    width:100%;
     background:#1e3a8a;
     padding:20px 0;
     z-index:9999;
