@@ -1,1 +1,68 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>आनंद फाउंडेशन</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
 
+<header>
+ <div class="container logo-area">
+      <img src="images/logo/logo.jpeg">
+      <div>
+        <h1>आनंद फाउंडेशन</h1>
+        <p>मतिमंद मुलांसाठी शिक्षण व पुनर्वसन केंद्र</p>
+      </div>
+    </div>
+   
+<div class="menu-toggle" id="menuToggle">☰</div>
+
+  </div>
+</header>
+
+<nav id="navbar">
+  <a href="index.html">मुख्यपृष्ठ</a>
+  <a href="about.html">संस्थेविषयी</a>
+  <a href="work.html">कार्य</a>
+  <a href="gallery.html">गॅलरी</a>
+  <a href="contact.html">संपर्क</a>
+</nav>
+
+
+<section class="prerna">
+  <div class="container">
+    <h2 style="text-align:center;">गॅलरी</h2>
+
+    <div class="gallery-grid">
+      <img src="images/gallery/img1.jpeg">
+      <img src="images/gallery/img2.jpeg">
+      <img src="images/gallery/img3.jpeg">
+      <img src="images/gallery/img4.jpeg">
+      <img src="images/gallery/img5.jpeg">
+      <img src="images/gallery/img6.jpeg">
+      <img src="images/gallery/img7.jpeg">
+      <img src="images/gallery/img8.jpeg">
+      <img src="images/gallery/img9.jpeg">
+      <img src="images/gallery/img10.jpeg">
+    </div>
+  </div>
+</section>
+  
+
+
+
+<footer>
+  <p>© आनंद फाउंडेशन</p>
+</footer>
+
+<script>
+const toggle = document.getElementById("menuToggle");
+const nav = document.getElementById("navbar");
+
+toggle.onclick = () => {
+  nav.classList.toggle("show");
+};
+</script>
