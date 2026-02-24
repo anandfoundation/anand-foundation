@@ -2,7 +2,9 @@
 body{
   font-family:'Noto Sans Devanagari', sans-serif;
   margin:0;
-  background:#fff7ed;
+  background:#f8fafc;
+  line-height:1.8;
+  letter-spacing:0.3px;
 }
 
 .container{
@@ -13,7 +15,7 @@ body{
 
 /* ===== HEADER ===== */
 header{
-  background:#fde68a;
+  background:white;
   padding:14px 0;
   box-shadow:0 2px 8px rgba(0,0,0,0.08);
 }
@@ -29,12 +31,18 @@ header{
   width:80px;
 }
 
+.tagline{
+  font-size:16px;
+  font-style:italic;
+  color:#2563eb;
+}
+
 /* ===== NAVBAR ===== */
 nav{
   display:flex;
   justify-content:center;
   gap:40px;
-  background:#fb923c;
+  background:#1e3a8a;
   padding:14px 0;
   box-shadow:0 2px 10px rgba(0,0,0,0.08);
 }
@@ -91,9 +99,32 @@ nav a:hover{
   opacity:1;
 }
 
+/* ===== HERO TEXT ON IMAGES ===== */
+.hero-text{
+  position:absolute;
+  bottom:50px;
+  left:50%;
+  transform:translateX(-50%);
+  text-align:center;
+  color:white;
+  background:rgba(30,58,138,0.6);
+  padding:20px 30px;
+  border-radius:10px;
+}
+
+.hero-text h2{
+  margin:0;
+  font-size:28px;
+}
+
+.hero-text p{
+  margin-top:8px;
+  font-size:16px;
+}
+
 /* ===== PRERNA SECTION ===== */
 .prerna{
-  background:#fff3e0;
+  background:#eff6ff;
   padding:50px 0;
 }
 
@@ -107,7 +138,8 @@ nav a:hover{
 footer{
   text-align:center;
   padding:20px;
-  background:#fde68a;
+  background:#1e3a8a;
+  color:white;
   margin-top:40px;
 }
 
@@ -119,11 +151,19 @@ footer{
   }
 
   .menu-toggle{
-    display:block;
-    position:absolute;
-    right:20px;
-    top:25px;
-    z-index:1001;
+  display:flex;
+  align-items:center;
+  gap:8px;
+  position:absolute;
+  right:20px;
+  top:20px;
+  z-index:1100;
+  background:white;
+  padding:8px 14px;
+  border-radius:6px;
+  box-shadow:0 3px 10px rgba(0,0,0,0.15);
+  font-weight:600;
+  color:#1e3a8a;
   }
 
    .slide-text{
@@ -170,7 +210,7 @@ nav a:hover{
 }
 
 h2{
-  color:#ea580c;
+  color:#1e3a8a;
   font-weight:700;
   margin-bottom:20px;
 }
