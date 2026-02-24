@@ -70,14 +70,9 @@ nav a:hover{
   position:absolute;
   width:100%;
   height:100%;
+  object-fit:cover;
   opacity:0;
   transition:opacity 1s ease;
-}
-
-.slide img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
 }
 
 .slide-text{
@@ -150,6 +145,12 @@ footer{
     z-index:1001;
   }
 
+nav a:hover{
+  transform:translateY(-2px);
+  opacity:0.85;
+  text-decoration:underline;
+}  
+
   nav.show{
     left:0;
   }
@@ -166,4 +167,10 @@ footer{
   height:220px;
   object-fit:cover;
   border-radius:10px;
+}
+
+h2{
+  color:#ea580c;
+  font-weight:700;
+  margin-bottom:20px;
 }
