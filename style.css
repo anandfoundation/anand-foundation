@@ -24,6 +24,8 @@ body{
   display:flex;
   align-items:center;
   justify-content:space-between;
+    position:relative;
+  z-index:2001;
 }
 
 .brand{
@@ -79,7 +81,6 @@ body{
   display:flex;
   gap:28px;
   align-items:center;
-  white-space:nowrap; 
 }
 
 .nav-links a{
@@ -107,6 +108,8 @@ body{
   width:100%;
   height:420px;
   overflow:hidden;
+  z-index:1;
+}
 }
 
 .slide{
@@ -183,7 +186,9 @@ footer{
     width:100%;
     background:#1e3a8a;
     padding:15px 0;
+    z-index:2000; 
   }
+
 
   .nav-links a{
     color:white;
