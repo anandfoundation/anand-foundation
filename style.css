@@ -89,7 +89,7 @@ main{
 /* Desktop Font size */
 @media(min-width:769px){
   body{
-    font-size:18px;
+    font-size:24px;
   }
 }
 
