@@ -16,7 +16,8 @@ nav {
 
 /* ===== MOBILE ===== */
 @media(max-width:768px){
-
+ .slider img{
+    height:240px;
   .menu-toggle{
     display:block;
   }
