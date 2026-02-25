@@ -261,7 +261,8 @@ footer{
   font-size:14px;
   justify-self:end;
   width:auto;          /* important */
-  min-width:100px;      /* remove forced width */
+  min-width:85px;      /* remove forced width */
+  text-align:center; 
   white-space:nowrap;
 }
   .nav-links .lang-btn{
