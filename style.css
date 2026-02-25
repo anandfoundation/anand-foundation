@@ -1,4 +1,7 @@
-/* ===== GLOBAL ===== */
+/* =====================================================
+   GLOBAL
+===================================================== */
+
 *,
 *::before,
 *::after{
@@ -9,8 +12,7 @@ body{
   font-family:'Noto Sans Devanagari', sans-serif;
   margin:0;
   background:#f8fafc;
-  line-height:1.8;
-  letter-spacing:0.3px;
+  line-height:1.7;
   overflow-x:hidden;
   display:flex;
   flex-direction:column;
@@ -20,101 +22,130 @@ body{
 main{ flex:1; }
 
 .container{
-  width:100%;
-  max-width:1250px;
+  max-width:1300px;
   margin:auto;
   padding:0 20px;
 }
 
-/* ===== HEADER ===== */
+/* =====================================================
+   HEADER
+===================================================== */
 
 .main-header{
   background:white;
   border-bottom:1px solid #e5e7eb;
-  box-shadow:0 2px 6px rgba(0,0,0,0.03);
-  position:relative;
-  z-index:1000;
 }
 
-/* Top row */
 .header-row{
   display:flex;
   align-items:center;
-  padding:10px 0;
+  justify-content:space-between;
+  padding:12px 0;
+  position:relative;
 }
 
 /* Brand */
 .brand{
   display:flex;
   align-items:center;
-  gap:14px;
+  gap:12px;
 }
 
 .brand img{
-  width:65px;
-  height:65px;
+  width:55px;
+  height:55px;
   border-radius:50%;
 }
 
 .brand-text h1{
-  font-size:40px;
   margin:0;
+  font-size:26px;
   color:#1e3a8a;
-  font-weight:700;
   line-height:1.2;
+  white-space:nowrap;
 }
 
 .tagline{
-  font-size:17px;
+  font-size:13px;
   color:#2563eb;
+  white-space:nowrap;
+}
+
+/* Navigation (Desktop Same Line) */
+.nav-links{
+  display:flex;
+  gap:22px;
+  align-items:center;
+}
+
+.nav-links a{
+  text-decoration:none;
+  color:#1e3a8a;
+  font-size:16px;
+  position:relative;
+  white-space:nowrap;
+}
+
+/* Hover underline */
+.nav-links a::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-4px;
+  width:0%;
+  height:2px;
+  background:#2563eb;
+  transition:0.3s;
+}
+
+.nav-links a:hover::after{
+  width:100%;
 }
 
 /* Right section */
-.header-right{
-  margin-left:auto;
+.header-actions{
   display:flex;
   align-items:center;
   gap:15px;
 }
 
-/* English button */
-.header-lang{
+/* English Button */
+.lang-btn{
   background:#1e3a8a;
   color:white;
-  padding:8px 14px;
+  padding:7px 14px;
   border-radius:6px;
-  font-size:14px;
   text-decoration:none;
+  font-size:14px;
+  white-space:nowrap;
   display:flex;
   align-items:center;
-  justify-content:center;
-  white-space:nowrap;
 }
 
-.header-lang::before{
+.lang-btn::before{
   content:"🌐 ";
 }
 
-/* Remove underline animation for English */
-.header-lang::after{
+/* Prevent underline animation */
+.lang-btn::after{
   display:none !important;
 }
 
-/* Hamburger / Suchi button */
+/* Menu Toggle (hidden on desktop) */
 .menu-toggle{
   display:none;
   align-items:center;
-  gap:8px;
+  gap:6px;
   background:#1e3a8a;
   color:white;
-  padding:8px 14px;
+  padding:7px 14px;
   border-radius:6px;
   font-size:14px;
   cursor:pointer;
   white-space:nowrap;
 }
 
-/* 3-line hamburger icon */
+/* Hamburger lines */
 .hamburger{
   width:18px;
   height:2px;
@@ -135,72 +166,21 @@ main{ flex:1; }
 .hamburger::before{ top:-6px; }
 .hamburger::after{ top:6px; }
 
-/* Navigation Desktop */
-.nav-links{
-  display:flex;
-  justify-content:center;
-  gap:25px;
-  padding:10px 0;
-}
+/* =====================================================
+   MOBILE
+===================================================== */
 
-.nav-links a{
-  text-decoration:none;
-  color:#1e3a8a;
-  font-size:19px;
-  position:relative;
-  white-space:nowrap;
-}
+@media(max-width:900px){
 
-/* Hover underline (nav only) */
-.nav-links a::after{
-  content:"";
-  position:absolute;
-  left:0;
-  bottom:-4px;
-  width:0%;
-  height:2px;
-  background:#2563eb;
-  transition:0.3s;
-}
-
-.nav-links a:hover::after{
-  width:100%;
-}
-
-/* ===== MOBILE ===== */
-@media(max-width:768px){
-
-  .header-row{
-    display:grid;
-    grid-template-columns:1fr auto;
-    align-items:start;
-  }
-
-  .header-right{
-    flex-direction:column;
-    align-items:flex-end;
-    gap:8px;
-  }
-
-  .menu-toggle{
-    display:flex;
-    width:110px;
-    height:36px;
-    justify-content:center;
-  }
-
-  .header-lang{
-    width:110px;
-    height:36px;
-    padding:0;
-  }
-
-  /* Dropdown */
   .nav-links{
     display:none;
-    flex-direction:column;
-    background:#1e3a8a;
+    position:absolute;
+    top:100%;
+    left:0;
     width:100%;
+    background:#1e3a8a;
+    flex-direction:column;
+    padding:10px 0;
   }
 
   .nav-links.active{
@@ -213,9 +193,38 @@ main{ flex:1; }
     text-align:center;
     border-bottom:1px solid rgba(255,255,255,0.2);
   }
+
+  .menu-toggle{
+    display:flex;
+  }
+
+  .header-actions{
+    flex-direction:column;
+    align-items:flex-end;
+    gap:8px;
+  }
+
+  .lang-btn,
+  .menu-toggle{
+    width:120px;
+    height:36px;
+    justify-content:center;
+    padding:0;
+  }
+
+  .brand-text h1{
+    font-size:22px;
+  }
+
+  .tagline{
+    font-size:12px;
+  }
 }
 
-/* ===== SLIDER ===== */
+/* =====================================================
+   SLIDER
+===================================================== */
+
 .slider{
   position:relative;
   width:100%;
@@ -240,33 +249,50 @@ main{ flex:1; }
   left:50%;
   transform:translateX(-50%);
   color:white;
-  font-size:28px;
+  font-size:26px;
   font-weight:600;
   text-align:center;
   width:90%;
 }
 
-/* ===== PRERNA ===== */
+/* =====================================================
+   WORK SECTION
+===================================================== */
+
+.work-section{
+  padding:60px 0;
+}
+
+.work-section h2{
+  text-align:center;
+  margin-bottom:25px;
+}
+
+.work-section ul{
+  max-width:600px;
+  margin:0 auto;
+  padding-left:20px;
+}
+
+/* =====================================================
+   PRERNA
+===================================================== */
+
 .prerna{
   background:#eff6ff;
   padding:50px 0;
 }
 
 .prerna p{
-  font-size:17px;
-  line-height:1.9;
+  font-size:16px;
+  line-height:1.8;
   color:#444;
 }
 
-/* ===== FOOTER ===== */
-footer{
-  text-align:center;
-  padding:20px;
-  background:#1e3a8a;
-  color:white;
-}
+/* =====================================================
+   GALLERY
+===================================================== */
 
-/* ===== GALLERY ===== */
 .gallery-grid{
   display:grid;
   grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
@@ -280,6 +306,21 @@ footer{
   object-fit:cover;
   border-radius:10px;
 }
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer{
+  text-align:center;
+  padding:20px;
+  background:#1e3a8a;
+  color:white;
+}
+
+/* =====================================================
+   HEADINGS
+===================================================== */
 
 h2{
   color:#1e3a8a;
