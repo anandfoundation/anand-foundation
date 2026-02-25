@@ -119,8 +119,11 @@ main{
 /* Desktop Navigation */
 .nav-links{
   display:flex;
-  gap:32px;
+  gap:20px;
   align-items:center;
+}
+.nav-links .lang-btn {
+  margin-left: auto;
 }
 
 .nav-links a{
@@ -299,6 +302,8 @@ footer{
 
   .menu-toggle {
     display: inline-block;
+    min-width: 120px;
+  text-align: center;
   }
 
   .nav-links {
@@ -319,6 +324,11 @@ footer{
     display: block;
     margin-top: 10px;
   }
+    .nav-links .lang-btn {
+    margin-left: 0;   /* reset */
+    width: 120px;     /* same size as menu button */
+    text-align: center;
+  }
 }
 
 }
@@ -338,13 +348,14 @@ footer{
 
 /* ===Language Buttons===*/
 .lang-btn {
-  background: #f59e0b;
+  background: #1e3a8a;   /* same as menu toggle */
   color: white;
   padding: 8px 14px;
   border-radius: 6px;
   text-decoration: none;
   font-size: 14px;
 }
+
 .mobile-lang {
   display: none;
 }
