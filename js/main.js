@@ -17,3 +17,8 @@ function switchToMarathi() {
   const marathiPath = currentPath.replace(/^\/en/, "");
   window.location.href = marathiPath || "/";
 }
+function switchToEnglish() {
+  const currentPath = window.location.pathname;
+  const englishPath = "/en" + (currentPath === "/" ? "/" : currentPath);
+  window.location.href = englishPath;
+}
