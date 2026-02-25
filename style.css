@@ -58,11 +58,15 @@ main{
 .header-row{
   display:flex;
   align-items:center;
-  justify-content:space-between;
-    position:relative;
-  z-index:2001;
+  gap:30px;
 }
 
+.nav-links{
+  display:flex;
+  gap:20px;
+  align-items:center;
+  margin-left:auto;
+}
 
 .header-controls {
   display: flex;
@@ -320,10 +324,4 @@ h2{
   color:#1e3a8a;
   font-weight:700;
   margin-bottom:20px;
-}
-
-.menu-toggle{
-  display:none;
-  cursor:pointer;
-  white-space:nowrap;
 }
