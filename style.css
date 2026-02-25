@@ -115,6 +115,15 @@ main{
 
 /* Desktop Font size */
 @media(min-width:769px){
+  .nav-links{
+    display:flex;
+    align-items:center;
+  }
+
+  .nav-links .header-lang{
+    margin-left:auto;   /* pushes English to extreme right */
+  }
+
   .prerna p{
     font-size:21px;
   }
@@ -143,6 +152,7 @@ main{
   padding-bottom:4px;
   transition:0.3s ease;
   position:relative;
+  white-space:nowrap;
 }
 
 /* Modern underline hover */
