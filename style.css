@@ -46,6 +46,7 @@ main{
 }
 
 /* ===== HEADER ===== */
+
 .main-header{
   background:white;
   box-shadow:0 2px 6px rgba(0,0,0,0.03);
@@ -59,6 +60,7 @@ main{
   display:flex;
   align-items:center;
   gap:30px;
+  position:relative;
 }
 
 /* Brand */
@@ -79,23 +81,42 @@ main{
   margin:0;
   color:#1e3a8a;
   font-weight:700;
-  letter-spacing:0.5px;
   line-height:1.2;
 }
 
 .tagline{
   font-size:17px;
   color:#2563eb;
-  margin-top:0;
 }
 
-/* ===== DESKTOP NAVIGATION ===== */
-.nav-links{
+/* Right section (English + Suchi) */
+.header-right{
+  margin-left:auto;
   display:flex;
   align-items:center;
+  gap:15px;
+}
+
+/* English button */
+.header-lang{
+  background:#1e3a8a;
+  color:white;
+  padding:8px 14px;
+  border-radius:6px;
+  font-size:14px;
+  text-decoration:none;
+}
+
+/* REMOVE underline animation ONLY for English */
+.header-lang::after{
+  display:none !important;
+}
+
+/* Navigation */
+.nav-links{
+  display:flex;
   gap:22px;
-  margin-left:auto;
-  flex-wrap:nowrap;            /* prevent wrapping */
+  margin-left:40px;
 }
 
 .nav-links a{
@@ -103,18 +124,16 @@ main{
   color:#1e3a8a;
   font-weight:500;
   font-size:19px;
-  padding-bottom:4px;
-  transition:0.3s ease;
   position:relative;
-  white-space:nowrap;          /* prevent text break */
+  white-space:nowrap;
 }
 
-/* Hover underline */
+/* underline hover */
 .nav-links a::after{
   content:"";
   position:absolute;
   left:0;
-  bottom:0;
+  bottom:-3px;
   width:0%;
   height:2px;
   background:#2563eb;
@@ -125,26 +144,59 @@ main{
   width:100%;
 }
 
-/* English button desktop */
-.header-lang{
-  margin-left:auto;            /* push extreme right */
-  background:#1e3a8a;
-  color:white;
-  padding:8px 14px;
-  border-radius:6px;
-  font-size:14px;
-}
-
-.header-lang::before{
-  content:"🌐 ";
-}
-
-/* Hamburger hidden desktop */
+/* hamburger hidden on desktop */
 .menu-toggle{
   display:none;
   font-size:28px;
   cursor:pointer;
-  white-space:nowrap;
+}
+
+/* ===== MOBILE ===== */
+@media(max-width:768px){
+
+  .header-row{
+    display:grid;
+    grid-template-columns:1fr auto;
+    align-items:start;
+  }
+
+  .header-right{
+    flex-direction:column;
+    align-items:flex-end;
+    gap:8px;
+  }
+
+  .menu-toggle,
+  .header-lang{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:85px;
+    height:36px;
+    font-size:14px;
+  }
+
+  .nav-links{
+    display:none;
+    position:absolute;
+    top:100%;
+    left:0;
+    width:100%;
+    background:#1e3a8a;
+    flex-direction:column;
+  }
+
+  .nav-links.active{
+    display:flex;
+  }
+
+  .nav-links a{
+    color:white;
+    padding:12px 0;
+    text-align:center;
+    font-size:16px;
+    border-bottom:1px solid rgba(255,255,255,0.2);
+  }
 }
 
 /* ===== SLIDER ===== */
